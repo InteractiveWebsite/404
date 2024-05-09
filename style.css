@@ -1,0 +1,131 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #24145E;
+}
+
+@keyframes rotation {
+  to{
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes shirinkAndGrow {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes expandHorizontal {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes appearFromBottom {
+  from {
+    transform: translateY(1000px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shakingHand {
+  from {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(2.5px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+  75% {
+    transform: translateY(1.5px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes soaking {
+  to {
+    transform: translateY(-250deg) scale(0);
+  }
+}
+
+#number-0-soaking {
+  animation: soaking 2s;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#alien_hand-R, #alien_hand-L {
+  animation: shakingHand 0.5s infinite;
+}
+
+#UFO-beam {
+  animation: expandHorizontal 3.5s;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#number-0 {
+  animation: appearFromBottom 3s;
+}
+
+#planet_2 {
+  animation: rotation 4s infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#planet_1 {
+  animation: rotation 4s infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#star_6 {
+  animation: shirinkAndGrow 4s infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#star_3 {
+  animation: shirinkAndGrow 5s infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#star_5 {
+  animation: shirinkAndGrow 7s infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#star_4 {
+  animation: shirinkAndGrow 11s infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
